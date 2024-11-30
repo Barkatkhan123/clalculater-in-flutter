@@ -1,7 +1,8 @@
+import 'package:app/homescreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -10,10 +11,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Material(
-        child: Center(
-            child: Container(child: Text("Ya ALLAH help me .forgive me"))),
-      ),
+      home:
+          const Homescreen(), // Add const for consistency if Homescreen is immutable
+      debugShowCheckedModeBanner: false, // Optional: Remove debug banner
     );
   }
 }
